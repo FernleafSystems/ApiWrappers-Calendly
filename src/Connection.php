@@ -4,20 +4,9 @@ namespace FernleafSystems\ApiWrappers\Calendly;
 
 use FernleafSystems\ApiWrappers\Calendly\OAuth\OAuthState;
 use FernleafSystems\ApiWrappers\Calendly\OAuth\OAuthStateConsumer;
+use FernleafSystems\ApiWrappers\Calendly\OAuth\Provider\Calendly;
 use FernleafSystems\ApiWrappers\Calendly\OAuth\RetrieveAccessToken;
 
-/**
- * Class Connection
- * @package FernleafSystems\ApiWrappers\Freeagent
- * @property string $access_token
- * @property string $base_url_override
- * @property string $client_id
- * @property string $uri_auth
- * @property string $uri_redirect
- * @property string $uri_resource
- * @property int    $expiration
- * @property bool   $sandbox
- */
 class Connection extends \FernleafSystems\ApiWrappers\Base\Connection {
 
 	use OAuthStateConsumer;
@@ -40,5 +29,13 @@ class Connection extends \FernleafSystems\ApiWrappers\Base\Connection {
 			->setOAuthState( $this->getOAuthState() )
 			->retrieve();
 		return $this->getOAuthState()->access_token;
+	}
+
+	public function getBaseUrl() {
+		return $this->getOAuthProvider()->getApiUrl();
+	}
+
+	public function getOAuthProvider() :Calendly {
+		return new Calendly();
 	}
 }

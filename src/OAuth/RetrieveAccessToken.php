@@ -21,6 +21,7 @@ class RetrieveAccessToken {
 		}
 
 		if ( empty( $state->access_token ) || empty( $state->refresh_token ) ) { // Need a brand new token.
+
 			try {
 				$this->storeAccessToken(
 					$this->getOAuthProvider()->getAccessToken( 'authorization_code', [
@@ -37,6 +38,7 @@ class RetrieveAccessToken {
 			}
 		}
 		elseif ( Carbon::now()->timestamp > $state->access_token_expires_at ) {  // Need to refresh an existing token.
+
 			try {
 				$this->storeAccessToken(
 					$this->getOAuthProvider()->getAccessToken( 'refresh_token', [
@@ -50,6 +52,9 @@ class RetrieveAccessToken {
 			catch ( IdentityProviderException $e ) {
 				error_log( 'Failed To Refresh Access Token: '.$e->getMessage() );
 			}
+		}
+		else {
+			$success = true;
 		}
 
 		return $success;
