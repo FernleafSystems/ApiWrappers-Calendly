@@ -6,7 +6,7 @@ class Create extends Base {
 
 	const REQUEST_METHOD = 'post';
 
-	public function create() :WebhookVO {
+	public function create() :WebhookSubscriptionVO {
 		return $this->sendRequestWithVoResponse();
 	}
 

@@ -17,6 +17,6 @@ namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Webhooks;
  * @property string   $created_at       - e.g 2021-02-09T14:51:54.130105Z
  * @property string   $updated_at-      - e.g 2021-02-09T14:51:54.130105Z
  */
-class WebhookVO extends \FernleafSystems\ApiWrappers\Base\BaseVO {
+class WebhookSubscriptionVO extends \FernleafSystems\ApiWrappers\Base\BaseVO {
 
 }

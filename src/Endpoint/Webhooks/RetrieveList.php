@@ -5,7 +5,7 @@ namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Webhooks;
 class RetrieveList extends Base {
 
 	/**
-	 * @return WebhookVO[]
+	 * @return WebhookSubscriptionVO[]
 	 */
 	public function retrieve() :?array {
 		$data = $this->req()->getCoreResponseData();

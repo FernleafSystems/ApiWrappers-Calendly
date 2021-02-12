@@ -8,7 +8,7 @@ class Retrieve extends Base {
 
 	use Common\SingleResourceUuid;
 
-	public function retrieve() :WebhookVO {
+	public function retrieve() :WebhookSubscriptionVO {
 		return $this->sendRequestWithVoResponse();
 	}
 
