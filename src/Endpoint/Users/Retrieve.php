@@ -2,38 +2,25 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Users;
 
-use FernleafSystems\ApiWrappers\Base\BaseVO;
+use FernleafSystems\ApiWrappers\Calendly\Endpoint\Common\SingleResourceRetrieve;
 
-/**
- * Class Retrieve
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoing\Users
- */
 class Retrieve extends \FernleafSystems\ApiWrappers\Calendly\Api {
 
-	public function retrieveMe() :BaseVO {
-		return $this->setUserID( 'me' )->sendRequestWithVoResponse();
+	use SingleResourceRetrieve;
+
+	protected function getVO() {
+		return new UserVO();
 	}
 
-	public function retrieve() :BaseVO {
+	public function retrieveMe() :UserVO {
+		return $this->setUniqueID( 'me' )->sendRequestWithVoResponse();
+	}
+
+	public function retrieve() :UserVO {
 		return $this->sendRequestWithVoResponse();
-	}
-
-	public function setUserID( string $ID ) :self {
-		return $this->setRequestDataItem( 'uuid', $ID );
 	}
 
 	protected function getUrlEndpoint() :string {
 		return sprintf( '/users/%s', $this->getRequestDataItem( 'uuid' ) );
-	}
-
-	protected function getResponseDataPayloadKey() :string {
-		return 'resource';
-	}
-
-	/**
-	 * @return string[]
-	 */
-	protected function getCriticalRequestItems() {
-		return [ 'uuid' ];
 	}
 }
