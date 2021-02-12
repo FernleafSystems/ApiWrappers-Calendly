@@ -28,10 +28,17 @@ class Create extends \FernleafSystems\ApiWrappers\Calendly\Api {
 	}
 
 	protected function getUrlEndpoint() :string {
-		return sprintf( '/event_types/%s', $this->getRequestDataItem( 'uuid' ) );
+		return '/scheduling_links';
 	}
 
 	protected function getResponseDataPayloadKey() :string {
 		return 'resource';
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function getCriticalRequestItems() {
+		return [ 'owner', 'owner_type', 'max_event_count' ];
 	}
 }
