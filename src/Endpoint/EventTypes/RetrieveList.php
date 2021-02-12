@@ -2,17 +2,20 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\EventTypes;
 
-use FernleafSystems\ApiWrappers\Base\BaseVO;
+class RetrieveList extends Base {
 
-/**
- * TODO
- * Class RetrieveList
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\EventTypes
- */
-class RetrieveList extends \FernleafSystems\ApiWrappers\Calendly\Api {
-
-	public function retrieve() :BaseVO {
-		return $this->sendRequestWithVoResponse();
+	/**
+	 * @return EventTypeVO[]
+	 */
+	public function retrieve() :?array {
+		$data = $this->req()->getCoreResponseData();
+		if ( !empty( $data ) ) {
+			$data = array_map(
+				fn( $item ) => $this->getVO()->applyFromArray( $item ),
+				$data
+			);
+		}
+		return $data;
 	}
 
 	public function setCount( int $count ) :self {
