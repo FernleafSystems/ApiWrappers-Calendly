@@ -2,7 +2,7 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Common;
 
-trait SingleResourceRetrieve {
+trait SingleResourceUuid {
 
 	public function setUniqueID( string $ID ) :self {
 		return $this->setRequestDataItem( 'uuid', $ID );

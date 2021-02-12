@@ -1,6 +1,6 @@
 <?php declare( strict_types=1 );
 
-namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\EventTypes;
+namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Webhooks;
 
 use FernleafSystems\ApiWrappers\Calendly\Endpoint\Common;
 
@@ -8,15 +8,11 @@ class Retrieve extends Base {
 
 	use Common\SingleResourceUuid;
 
-	public function retrieve() :EventTypeVO {
+	public function retrieve() :WebhookVO {
 		return $this->sendRequestWithVoResponse();
 	}
 
-	protected function getVO() {
-		return new EventTypeVO();
-	}
-
 	protected function getUrlEndpoint() :string {
-		return sprintf( '/event_types/%s', $this->getUUID() );
+		return sprintf( '/%s/%s', static::API_URL_STUB, $this->getUUID() );
 	}
 }

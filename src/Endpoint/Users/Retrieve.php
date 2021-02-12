@@ -2,11 +2,11 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Users;
 
-use FernleafSystems\ApiWrappers\Calendly\Endpoint\Common\SingleResourceRetrieve;
+use FernleafSystems\ApiWrappers\Calendly\Endpoint\Common\SingleResourceUuid;
 
 class Retrieve extends \FernleafSystems\ApiWrappers\Calendly\Api {
 
-	use SingleResourceRetrieve;
+	use SingleResourceUuid;
 
 	protected function getVO() {
 		return new UserVO();

@@ -4,7 +4,7 @@ namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\SchedulingLink;
 
 /**
  * Class SchedulingLinkVO
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\Users
+ * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\SchedulingLink
  * @property string $booking_url
  * @property string $owner
  * @property string $owner_type
