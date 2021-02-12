@@ -27,11 +27,11 @@ class RetrieveList extends Base {
 	}
 
 	public function setUser( string $userURI ) :self {
-		return $this->setRequestQueryDataItem( 'user', $userURI );
+		return $this->setRequestQueryDataItem( self::SCOPE_USER, $userURI );
 	}
 
 	public function setOrg( string $orgURI ) :self {
-		return $this->setRequestQueryDataItem( 'origanization', $orgURI );
+		return $this->setRequestQueryDataItem( self::SCOPE_ORGANIZATION, $orgURI );
 	}
 
 	public function setSortBy( string $sortBy ) :self {

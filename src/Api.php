@@ -9,7 +9,7 @@ class Api extends BaseApi {
 
 	const REQUEST_METHOD = 'get';
 	const SCOPE_USER = 'user';
-	const SCOPE_ORGANIZATION = 'organisation';
+	const SCOPE_ORGANIZATION = 'organization';
 
 	protected function preFlight() {
 		/** @var Connection $conn */

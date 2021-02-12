@@ -14,8 +14,12 @@ class Create extends Base {
 		return $this->setRequestDataItem( 'url', $url );
 	}
 
-	public function setEvents( array $events = [ 'invitee.created', 'invitee.canceled' ] ) :self {
+	public function setEvents( array $events ) :self {
 		return $this->setRequestDataItem( 'events', $events );
+	}
+
+	public function setEventsDefault() :self {
+		return $this->setEvents( [ 'invitee.created', 'invitee.canceled' ] );
 	}
 
 	public function setScope( string $scope ) :self {

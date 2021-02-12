@@ -2,12 +2,10 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Organizations;
 
-use FernleafSystems\ApiWrappers\Base\BaseVO;
-
 class ListMemberships extends Base {
 
 	/**
-	 * @return BaseVO[]
+	 * @return OrganizationVO[]
 	 */
 	public function retrieve() :?array {
 		$data = $this->req()->getCoreResponseData();
