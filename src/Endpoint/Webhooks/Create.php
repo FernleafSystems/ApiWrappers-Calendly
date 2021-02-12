@@ -32,10 +32,6 @@ class Create extends Base {
 					->setScope( self::SCOPE_USER );
 	}
 
-	protected function getUrlEndpoint() :string {
-		return sprintf( '/%s', static::API_URL_STUB );
-	}
-
 	protected function getResponseDataPayloadKey() :string {
 		return 'resource';
 	}

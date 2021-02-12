@@ -9,4 +9,8 @@ class Base extends \FernleafSystems\ApiWrappers\Calendly\Api {
 	protected function getVO() {
 		return new WebhookVO();
 	}
+
+	protected function getUrlEndpoint() :string {
+		return sprintf( '/%s', static::API_URL_STUB );
+	}
 }
