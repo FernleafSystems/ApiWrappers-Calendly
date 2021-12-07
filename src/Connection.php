@@ -2,7 +2,6 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly;
 
-use FernleafSystems\ApiWrappers\Calendly\OAuth\OAuthState;
 use FernleafSystems\ApiWrappers\Calendly\OAuth\OAuthStateConsumer;
 use FernleafSystems\ApiWrappers\Calendly\OAuth\Provider\Calendly;
 use FernleafSystems\ApiWrappers\Calendly\OAuth\RetrieveAccessToken;
@@ -17,11 +16,9 @@ class Connection extends \FernleafSystems\ApiWrappers\Base\Connection {
 	 *
 	 * This current OAuth implementation assumes that the OAuthState supplied to the Connection (perhaps stored in DB)
 	 * already has the authorization code attached to it.
-	 * @return bool
 	 */
 	public function isReady() :bool {
-		$state = $this->getOAuthState();
-		return $state instanceof OAuthState && !empty( $state->authorization_code );
+		return !empty( $this->getOAuthState()->authorization_code );
 	}
 
 	public function getAccessToken() :string {

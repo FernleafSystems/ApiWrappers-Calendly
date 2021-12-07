@@ -14,10 +14,6 @@ class Capture {
 	}
 
 	/**
-	 * @param string   $rawContent
-	 * @param string   $rawHeader
-	 * @param int|null $now
-	 * @return WebhookCaptureVO
 	 * @throws \Exception
 	 */
 	public function run( string $rawContent, string $rawHeader, ?int $now = null ) :WebhookCaptureVO {

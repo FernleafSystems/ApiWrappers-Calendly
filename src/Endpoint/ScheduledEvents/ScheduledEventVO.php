@@ -3,8 +3,6 @@
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\ScheduledEvents;
 
 /**
- * Class ScheduledEventVO
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\ScheduledEvents
  * @property string  $uri
  * @property string  $name
  * @property string  $status

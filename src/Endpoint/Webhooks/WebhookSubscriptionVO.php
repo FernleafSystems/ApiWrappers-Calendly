@@ -3,8 +3,6 @@
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Webhooks;
 
 /**
- * Class WebhookVO
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\Webhooks
  * @property string   $uri
  * @property string   $callback_url
  * @property string   $state

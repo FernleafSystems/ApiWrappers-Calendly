@@ -5,8 +5,6 @@ namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\Users;
 use FernleafSystems\ApiWrappers\Base\BaseVO;
 
 /**
- * Class UserVO
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\Users
  * @property string $uri
  * @property string $email
  * @property string $name

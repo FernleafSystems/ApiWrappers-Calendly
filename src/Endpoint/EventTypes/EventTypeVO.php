@@ -3,8 +3,6 @@
 namespace FernleafSystems\ApiWrappers\Calendly\Endpoint\EventTypes;
 
 /**
- * Class EventTypeVO
- * @package FernleafSystems\ApiWrappers\Calendly\Endpoint\EventTypes
  * @property string $uri
  * @property string $name
  * @property string $slug
