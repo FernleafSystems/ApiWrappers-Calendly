@@ -2,9 +2,9 @@
 
 namespace FernleafSystems\ApiWrappers\Calendly\WebhookCapture;
 
+use FernleafSystems\Utilities\Data\Adapter\DynPropertiesClass;
+
 /**
- * Class WebhookPayloadVO
- * @package FernleafSystems\ApiWrappers\Calendly\WebhookCapture
  * @property string     $event                 - Scheduled Event URI
  * @property string     $uri                   - invitee URI
  * @property string     $cancel_url
@@ -24,6 +24,6 @@ namespace FernleafSystems\ApiWrappers\Calendly\WebhookCapture;
  * @property string     $old_invitee           - uri available when is a reschedule
  * @property string     $updated_at
  */
-class WebhookPayloadVO extends \FernleafSystems\ApiWrappers\Base\BaseVO {
+class WebhookPayloadVO extends DynPropertiesClass {
 
 }

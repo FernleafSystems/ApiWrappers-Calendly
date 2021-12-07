@@ -21,13 +21,13 @@ class Api extends BaseApi {
 	 * @return array|null
 	 */
 	public function getCoreResponseData() {
-		$aData = null;
+		$data = null;
 		if ( $this->isLastRequestSuccess() ) {
 			$sKey = $this->getResponseDataPayloadKey();
 			$aDecoded = $this->getDecodedResponseBody();
-			$aData = empty( $sKey ) ? $aDecoded : $aDecoded[ $sKey ];
+			$data = empty( $sKey ) ? $aDecoded : $aDecoded[ $sKey ];
 		}
-		return $aData;
+		return $data;
 	}
 
 	protected function getResponseDataPayloadKey() :string {
