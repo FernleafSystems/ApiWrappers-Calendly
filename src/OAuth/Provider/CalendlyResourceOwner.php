@@ -9,10 +9,7 @@ use League\OAuth2\Client\Provider\ResourceOwnerInterface;
  */
 class CalendlyResourceOwner implements ResourceOwnerInterface {
 
-	/**
-	 * @var array
-	 */
-	protected $response;
+	protected array $response;
 
 	/**
 	 * @var string

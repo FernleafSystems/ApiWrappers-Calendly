@@ -28,7 +28,7 @@ class Connection extends \FernleafSystems\ApiWrappers\Base\Connection {
 		return $this->getOAuthState()->access_token;
 	}
 
-	public function getBaseUrl() {
+	public function getBaseUrl() :string {
 		return $this->getOAuthProvider()->getApiUrl();
 	}
 

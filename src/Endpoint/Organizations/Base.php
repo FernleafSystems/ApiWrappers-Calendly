@@ -6,7 +6,7 @@ class Base extends \FernleafSystems\ApiWrappers\Calendly\Api {
 
 	protected const API_URL_STUB = 'organization_memberships';
 
-	protected function getVO() {
+	protected function getVO() :OrganizationVO {
 		return new OrganizationVO();
 	}
 }

@@ -8,7 +8,7 @@ class Retrieve extends \FernleafSystems\ApiWrappers\Calendly\Api {
 
 	use SingleResourceUuid;
 
-	protected function getVO() {
+	protected function getVO() :UserVO {
 		return new UserVO();
 	}
 

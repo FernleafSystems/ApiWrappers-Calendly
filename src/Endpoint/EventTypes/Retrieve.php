@@ -12,7 +12,7 @@ class Retrieve extends Base {
 		return $this->sendRequestWithVoResponse();
 	}
 
-	protected function getVO() {
+	protected function getVO() :EventTypeVO {
 		return new EventTypeVO();
 	}
 

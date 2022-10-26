@@ -40,10 +40,7 @@ class Create extends Base {
 		return 'resource';
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	protected function getCriticalRequestItems() {
+	protected function getCriticalRequestItems() :array {
 		return [ 'url', 'events', 'scope' ];
 	}
 }

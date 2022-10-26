@@ -12,8 +12,8 @@ class Retrieve extends \FernleafSystems\ApiWrappers\Calendly\Api {
 		return $this->sendRequestWithVoResponse();
 	}
 
-	protected function getVO() {
-		return new ScheduledEventVO;
+	protected function getVO() :ScheduledEventVO {
+		return new ScheduledEventVO();
 	}
 
 	protected function getUrlEndpoint() :string {
