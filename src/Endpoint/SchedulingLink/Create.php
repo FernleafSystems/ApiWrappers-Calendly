@@ -10,7 +10,7 @@ class Create extends \FernleafSystems\ApiWrappers\Calendly\Api {
 		return $this->sendRequestWithVoResponse();
 	}
 
-	protected function getVO() {
+	protected function getVO() :SchedulingLinkVO {
 		return new SchedulingLinkVO();
 	}
 
@@ -35,10 +35,7 @@ class Create extends \FernleafSystems\ApiWrappers\Calendly\Api {
 		return 'resource';
 	}
 
-	/**
-	 * @inheritDoc
-	 */
-	protected function getCriticalRequestItems() {
+	protected function getCriticalRequestItems() :array {
 		return [ 'owner', 'owner_type', 'max_event_count' ];
 	}
 }

@@ -62,7 +62,7 @@ class Calendly extends AbstractProvider {
 			throw new CalendlyProviderException(
 				$data[ 'error' ],
 				isset( $data[ 'code' ] ) ? (int)$data[ 'code' ] : $response->getStatusCode(),
-				$response
+				$response->getReasonPhrase()
 			);
 		}
 	}

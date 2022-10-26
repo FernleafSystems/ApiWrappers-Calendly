@@ -6,7 +6,7 @@ class Base extends \FernleafSystems\ApiWrappers\Calendly\Api {
 
 	protected const API_URL_STUB = 'webhook_subscriptions';
 
-	protected function getVO() {
+	protected function getVO() :WebhookSubscriptionVO {
 		return new WebhookSubscriptionVO();
 	}
 
